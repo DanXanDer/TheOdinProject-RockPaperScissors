@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.contenido{
+    flex-direction: column;
+    display: flex;
+}
+.contenido .header{
+    background-color:#030421;
+    text-align: center;
+    font-family: 'Common Pixel', sans-serif;
+    color: #54851c;
+    font-size: 25px;
+}
+.footer{
+    background-color:#030421;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+.game-container{
+    font-weight: bolder;
+    color: #c4c4bc;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #15202e;
+    
+}
+.game-container .selection-title{
+    font-size: 35px;    
+}
+.game-container .title-desc{
+    font-size: 20px;
+}
+.game-container .buttons{
+    margin-top: 50px;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.game-container .buttons button{
+    background-color: #0d0d1f;
+    border-radius: 15px;
+    border-style: none;
+}
+
+.sign{
+    font-size: 100px;
+    padding: 20px;
+}
+.buttons button:hover{
+    background-color: #181930;
+    cursor: pointer;
+}
+.buttons button:active{
+    background-color: black;
+}
+.score{
+    flex-direction: column;
+    display: flex;    
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+}
+.sign-selections{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+.user .user-sign, .computer-sign{
+    font-size: 100px;
+}
+.computer-score, .user-score{
+    font-size: 25px;
+}
+

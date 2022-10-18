@@ -1,19 +1,81 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Rock paper scissors</title>
+    <link href="http://fonts.cdnfonts.com/css/common-pixel" rel="stylesheet">
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/common-pixel');
+    </style>
 </head>
+
 <body>
-    <div class="buttons">
-        <button class="paper">Paper</button>
-        <button class="rock">Rock</button>
-        <button class="scissors">Scissors</button>
-    </div>   
+    <div class="contenido">
+        <div class="header">
+            <h1 class="title">PIEDRA PAPEL TIJERA</h1>
+        </div>
+        <div class="game-container">
+            <div class="user-selection">
+                <div class="text">
+                    <h1 class="selection-title">Escoje una opción</h1>
+                    <div class="title-desc">El primero en hacer 5 puntos es el ganador</div>
+                </div>
+                <div class="buttons">
+                    <button class="rock">
+                        <div class="sign">✊</div>
+                    </button>
+                    <button class="paper">
+                        <div class="sign">✋</div>
+                    </button>
+                    <button class="scissors">
+                        <div class="sign">✌</div>
+                    </button>
+                </div>
+            </div>
+            <div class="score">
+                <div class="score-msg">
+                    <h2 class="title-msg"></h2>                    
+                </div>
+                <div class="sign-selections">
+                    <div class="user">
+                        <div class="user-sign">?</div>
+                        <h2 class="user-score">Usuario: <span></span></h2>
+                    </div>
+                    <div class="computer">
+                        <div class="computer-sign">?</div>
+                        <h2 class="computer-score">Computadora: <span></span></h2>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer">
+            <h5 class="footer-text">Copyright © Daniel Gonzales Castillo</h2>
+        </div>
+    </div>
+
+
+    <!--<div class="buttons">
+        <div class="rock-container">
+            <img src="img/rock.jpg">
+            <button class="rock">Select rock</button>
+        </div>
+        <div class="scissors-container">
+            <img src="img/scissors.jpg">
+            <button class="scissors">Select scissors</button>
+        </div>
+        <div class="paper-container">
+            <img src="img/paper.jpg">
+            <button class="paper">Select paper</button>
+        </div>
+    </div>
     <div class="container"></div>
-    <div class="results"></div>
+    <div class="results"></div>-->
     <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/7715cd7cb3.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -7,15 +7,9 @@ const computerSelection = function getComputeChoice() {
 const userSelections = Array.from(document.querySelectorAll("button"));
 userSelections.forEach(userSelection => userSelection.addEventListener("click", playRound))
 
-//Container
+/*Container
 const container = document.querySelector(".container");
 container.classList.add("container");
-container.style.backgroundColor = "pink";
-container.style.marginTop = "20px";
-container.style.display = "flex";
-container.style.justifyContent = "space-around";
-container.style.borderStyle = "solid";
-container.style.borderColor = "black";
 
 //User container
 const userContainer = document.createElement("div");
@@ -43,59 +37,76 @@ let i = 0;
 //Append
 container.append(roundContainer);
 container.append(userContainer);
-container.append(computerContainer);
+container.append(computerContainer);*/
 
 let userPoints = 0;
 let computerPoints = 0;
 
 function playRound() {
     const computerSelection1 = computerSelection();
+    const userSign = document.querySelector(".user-sign");
+    const pcSign = document.querySelector(".computer-sign");
+    userSign.textContent = "";
+    pcSign.textContent = "";
     let msg = "";
-    if (this.getAttribute("class") === "rock") {
+    console.log(this);
+    const symbolUser = document.querySelector(`.${this.getAttribute("class")} .sign`);
+    userSign.textContent = symbolUser.innerText; 
+    const symbolPC = document.querySelector(`.${computerSelection1} .sign`);
+    pcSign.textContent = symbolPC.innerText;
+    if (this.getAttribute("class") === "rock") {   
+           
         if (computerSelection1 === "ROCK") {
-            msg = "Hey, it's a draw!"
+            msg = "Es un empate!"
 
         }
         else if (computerSelection1 === "PAPER") {
-            msg = "Sad! Rock is beaten by paper";
+            msg = "Perdiste!"
             computerPoints++;
 
         }
         else {
-            msg = "Congratz! Rock beats Scissors! You won.";
+            msg = "Ganaste!";
             userPoints++;
 
         }
     }
     else if (this.getAttribute("class") === "paper") {
         if (computerSelection1 === "ROCK") {
-            msg = "Congratz! You won! Paper beats rock"
+            msg = "Ganaste!"
             ++userPoints;
         }
         else if (computerSelection1 === "PAPER") {
-            msg = "Hey! It's a draw!";
+            msg = "Es un empate!";
         }
         else {
-            msg = "Sad! You lose! Paper is beaten by Scissors";
+            msg = "Perdiste!";
             ++computerPoints;
         }
     }
     else {
         if (computerSelection1 === "ROCK") {
-            msg = "Sad! You lose! Scissors is beaten by Rock!"
+            msg = "Perdiste!"
             ++computerPoints;
         }
         else if (computerSelection1 === "PAPER") {
-            msg = "Congratz! You won! Scissors beats paper!";
+            msg = "Ganaste!";
             ++userPoints;
         }
         else {
-            msg = "Hey! It's a draw!";
+            msg = "Es un empate!";
         }
 
-    }
+    }    
 
-    i++;
+    const usScore = document.querySelector(".user-score span");
+    const pcScore = document.querySelector(".computer-score span");
+    const resultMsg = document.querySelector(".title-msg");
+    resultMsg.innerText = msg;
+    usScore.innerText = userPoints;
+    pcScore.innerText = computerPoints;
+
+    /*i++;
     const roundText = document.createElement("h4");
     roundText.textContent = `ROUND ${i}`
     roundContainer.append(roundText);
@@ -106,16 +117,12 @@ function playRound() {
 
     const computerSelectionText = document.createElement("h4");
     computerContainer.append(computerSelectionText);
-    computerSelectionText.textContent = `${computerSelection1}`;
+    computerSelectionText.textContent = `${computerSelection1}`;*/
 
-    if (i == 5) {
+    /*if (i == 5) {
         userSelections.forEach(userSelection => userSelection.removeEventListener("click", playRound));
         const results = document.querySelector(".results");
-        results.style.backgroundColor = "green";
-        results.style.borderStyle = "solid";
-        results.style.borderColor = "black";
-        results.style.marginTop = "20px";
-        results.style.textAlign = "center";
+        results.classList.add("results");        
 
         const puntajeTituloDiv = document.createElement("div");
         const puntajeTitulo = document.createElement("h2");
@@ -155,9 +162,5 @@ function playRound() {
         results.append(winnerMsgDiv);
 
 
-    }
+    }*/
 }
-
-
-
-
